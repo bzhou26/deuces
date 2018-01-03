@@ -2,7 +2,8 @@ import itertools
 from .card import Card
 from .lookup import LookupTable
 
-class Evaluator(object):
+
+class Evaluator:
     """
     Evaluates hand strengths using a variant of Cactus Kev's algorithm:
     http://suffe.cool/poker/evaluator.html
@@ -18,9 +19,9 @@ class Evaluator(object):
         self.table = LookupTable()
         
         self.hand_size_map = {
-            5 : self._five,
-            6 : self._six,
-            7 : self._seven
+            5: self._five,
+            6: self._six,
+            7: self._seven,
         }
 
     def evaluate(self, cards, board):
@@ -172,7 +173,7 @@ class Evaluator(object):
 
             # otherwise on all other streets
             else:
-                print
+                print()
                 print(("=" * line_length) + " HAND OVER " + ("=" * line_length))
                 if len(winners) == 1:
                     print("Player %d is the winner with a %s\n" % (winners[0] + 1,

@@ -1,7 +1,8 @@
-from card import Card
+from deuces import Card
 from hand_evaluator import HandEvaluator
 import time
 import random
+
 
 def setup(n):
 
